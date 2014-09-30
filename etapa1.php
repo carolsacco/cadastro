@@ -11,13 +11,15 @@
 	<form method="POST" action="etapa2.php"> 
  		<div align="center">
 			<center> 
-				<p>Nome: <input type="text" name="nome" size="20"></p>
+				<p>Nome: <input type="text" name="nome" size="20" value="<?php echo $_POST['nome']?>"></p>
+                                <?php $nome = $_POST['nome']; if(empty($nome)){echo "Verifique se o campo nome esta preenchido.<br>"; $erro=TRUE;}?>
 			</center>
 		</div>
 		<div align="center">
 			<center> 
-				<p>E-mail: <input type="text" name="email" size="20"></p> 
- 			</center>
+				<p>E-mail: <input type="text" name="email" size="20" value="<?php echo $_POST ['email'] ?>"></p>
+                                <?php $email = $_POST['email']; if(empty($email) OR !strstr($email,'@')){echo "Verifique se o campo e-mail esta preenchido ou se esta preenchido de modo correto. <br>"; $erro=TRUE;} ?>
+                        </center>
 		</div>
 		<div align="center">
 			<center> 

@@ -26,5 +26,17 @@
 			<input type="submit" value="Inserir" name="Inserir">
 		</form>
 		
+                
+                <h3> Atualizar produto </h3>
+		<form method="POST" action="gerencia.php">
+			<input type="hidden" name="operacao" value="atualizar">
+			<label> Código do Produto
+				<input type="text" name="codigo_produto" size="5"> 
+                        </label>
+                        <label> Novo Produto
+				<input type="text" name="nome_produto" size="20"> 
+			</label>
+			<input type="submit" value="Inserir" name="Inserir">
+		</form>
 </body>
 </html>
